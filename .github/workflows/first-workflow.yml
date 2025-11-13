@@ -1,4 +1,4 @@
-name: ASCII Artwork
+name: Greetings Artwork
 on: push
 jobs:
   ascii-artwork:
@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v5.0.0
-      - name: Install Cowsay
+      - name: Greetings
         run: |
           echo "Hello World!"
           echo "Welcome to GitHub Actions"
