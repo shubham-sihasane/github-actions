@@ -9,7 +9,9 @@ jobs:
         uses: actions/checkout@v5.0.0
 
       - name: ASCII Artwork Shell Script
-        run: ./ascii-artwork.sh
+        run: |
+          chmod +x ascii-artwork.sh
+          ./ascii-artwork.sh
 
       # - name: Install Cowsay
       #   run: sudo apt-get update && sudo apt-get install cowsay -y
