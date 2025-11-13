@@ -1,0 +1,16 @@
+name: ASCII Artwork
+on: push
+jobs:
+  ascii-artwork:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v5.0.0
+      - name: Install Cowsay
+        run: sudo apt install cowsay -y
+      - name: Display Artwork
+        run: cowsay -f dragan "Hello Actions" >> dragon.txt
+      - name: Check File Exists
+        run: grep -i dragon dragon.txt
+      - name: Read dragon file
+        run: cat dragon.txt
