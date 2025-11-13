@@ -17,5 +17,3 @@ jobs:
       #   run: echo "Welcome to GitHub Actions"
       # - name: Display README
       #   run: cat README.md
-      - name: Generate ASCII Artwork
-        run: cowsay -f dragon "Hello Actions" >> dragon.txt
