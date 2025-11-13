@@ -8,17 +8,20 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v5.0.0
 
-      - name: Install Cowsay
-        run: sudo apt-get update && sudo apt-get install cowsay -y
+      - name: ASCII Artwork Shell Script
+        run: ./ascii-artwork.sh
 
-      - name: Execute Cowsay
-        run: cowsay -f dragon "Run for cover, I am a DRAGON" >> dragon.txt
+      # - name: Install Cowsay
+      #   run: sudo apt-get update && sudo apt-get install cowsay -y
 
-      - name: Verify Output
-        run: grep -i "dragon" dragon.txt
+      # - name: Execute Cowsay
+      #   run: cowsay -f dragon "Run for cover, I am a DRAGON" >> dragon.txt
 
-      - name: Display Artwork
-        run: cat dragon.txt
+      # - name: Verify Output
+      #   run: grep -i "dragon" dragon.txt
 
-      - name: List Repository Files
-        run: ls -ltra
+      # - name: Display Artwork
+      #   run: cat dragon.txt
+
+      # - name: List Repository Files
+      #   run: ls -ltra
